@@ -1,0 +1,14 @@
+<html>
+<head>
+<script>
+    let amount = parseFloat(prompt("Enter your product amount:"));
+    let gst = parseFloat(prompt("Enter GST Percentage:"));
+
+    let gstAmount = amount * (gst / 100);
+    let finalAmount = amount + gstAmount;
+
+    document.write("GST Amount = ₹" + gstAmount + "<br>");
+    document.write("Final Amount = ₹" + finalAmount);
+</script>
+</head>
+</html>
