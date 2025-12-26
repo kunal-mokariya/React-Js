@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<title>ATM Program</title>
+<script>
+    let balance = 5000; // Initial balance
+
+    function atm() {
+        let choice = parseInt(prompt(
+            "Welcome to ATM\n\n" +
+            "1. Check Balance\n" +
+            "2. Deposit Money\n" +
+            "3. Withdraw Money\n" +
+            "4. Exit\n\n" +
+            "Enter your choice:"
+        ));
+
+        switch (choice) {
+
+            case 1:
+                alert("Your Balance is: ₹" + balance);
+                break;
+
+            case 2:
+                let deposit = parseFloat(prompt("Enter amount to deposit:"));
+                if (deposit > 0) {
+                    balance += deposit;
+                    alert("Deposited Successfully!\nNew Balance: ₹" + balance);
+                } else {
+                    alert("Invalid Amount!");
+                }
+                break;
+
+            case 3:
+                let withdraw = parseFloat(prompt("Enter amount to withdraw:"));
+                if (withdraw > balance) {
+                    alert("Insufficient Balance!");
+                } else if (withdraw > 0) {
+                    balance -= withdraw;
+                    alert("Withdrawal Successful!\nRemaining Balance: ₹" + balance);
+                } else {
+                    alert("Invalid Amount!");
+                }
+                break;
+
+            case 4:
+                alert("Thank you for using the ATM!");
+                return;
+
+            default:
+                alert("Invalid Choice!");
+        }
+
+        atm(); // Repeat ATM menu
+    }
+
+    atm();
+</script>
+</head>
+<body>
+</body>
+</html>
