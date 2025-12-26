@@ -1,0 +1,17 @@
+<script>
+
+const si = (p,r,n,fun1) => {
+	let i=p*r*n/100;
+	fun1(p,r,n,i);
+}
+
+const display = (a,b,c,x) => {
+document.write("<br>P: "+ a);
+document.write("<br>R: "+ b);
+document.write("<br>N: "+ c);
+document.write("<br>Simple interest: "+ x);
+}
+
+si(10000,10,2,display);
+
+</script>

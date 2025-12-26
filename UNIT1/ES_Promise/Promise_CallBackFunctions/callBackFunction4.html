@@ -1,0 +1,9 @@
+<script>
+const addition = (a,b,callback) => {
+	let sum = a+b;
+	callback(sum);
+}
+const displayResultCallback = result => document.write("<br>Addition : " + result);
+addition(100,20,displayResultCallback);
+
+</script>

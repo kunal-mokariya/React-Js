@@ -1,0 +1,21 @@
+<script>
+   class Root {
+      test() {
+      console.log("call from parent class")
+   } 
+}
+   class Child extends Root {
+      test1() {
+      console.log("call from child class")
+   } 
+}
+   class Leaf extends Child   {
+      test2() {
+      console.log("call from Leaf class")
+   } 
+}
+   var obj = new Leaf();
+   obj.test()
+   obj.test1()
+   obj.test2()
+</script>

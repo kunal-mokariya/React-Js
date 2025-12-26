@@ -1,0 +1,16 @@
+<h1 id='name'></h1>
+<h1 id='city'></h1>
+<script>
+	class test {
+		constructor(name, city) {
+			this.name = name;
+			this.city = city;
+		}
+		output() {
+			document.getElementById("name").innerHTML = this.name;
+			document.getElementById("city").innerHTML = this.city;
+		}
+	}
+	const obj1 = new test("ccsit", "Junagadh");
+	obj1.output();
+</script>

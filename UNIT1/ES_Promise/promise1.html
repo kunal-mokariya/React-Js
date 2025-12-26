@@ -1,0 +1,14 @@
+<script>
+const promise = new Promise((resolve, reject)=>{  
+    let a = 0;  
+    if(a==3){  
+        resolve('Success');  
+    }  
+    else{  
+        reject('Failed');  
+    }  
+});
+promise.then((message)=>{  
+    console.log("It is then block. The message is: "+ message);  
+});
+</script>

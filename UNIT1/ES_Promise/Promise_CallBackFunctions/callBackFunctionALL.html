@@ -1,0 +1,43 @@
+<script>
+function fetchData(callback) {
+    setTimeout(() => {
+        console.log("Fetched data.");
+        callback(null, { data: "Some data" });
+    }, 1000);
+}
+
+function processData(data, callback) {
+    setTimeout(() => {
+        console.log("Processing data:", data);
+        callback(null, { processed: "Processed data" });
+    }, 1000);
+}
+
+function saveData(data, callback) {
+    setTimeout(() => {
+        console.log("Saving data:", data);
+        callback(null, "Data saved successfully");
+    }, 1000);
+}
+
+// Callback Hell Example
+fetchData(function(error, data) {
+    if (error) {
+        console.log("Error fetching data:", error);
+        return;
+    }
+    processData(data, function(error, processedData) {
+        if (error) {
+            console.log("Error processing data:", error);
+            return;
+        }
+        saveData(processedData, function(error, successMessage) {
+            if (error) {
+                console.log("Error saving data:", error);
+                return;
+            }
+            console.log(successMessage);
+        });
+    });
+});
+</script>

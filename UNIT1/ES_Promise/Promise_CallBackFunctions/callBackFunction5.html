@@ -1,0 +1,14 @@
+<script>
+const fun1 = (x) =>{
+	setTimeout(
+	function(){
+	document.write("function1 is called");
+	x();
+	},1000);
+}
+const fun2 = () =>{
+	document.write("<br>function2 is called");
+}
+fun1(fun2);
+
+</script>
