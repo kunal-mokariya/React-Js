@@ -94,8 +94,8 @@ function Student()
         <td>{lastname}</td>
         <td>{gender}</td>
         <td>{country}</td>
-        <td>{fbox && "Yes" || "No"}</td>
-        <td>{sbox && "Yes" || "No"}</td>
+        <td>{fbox.toString()}</td>
+        <td>{sbox.toString()}</td>
       </tr>
     </>
   )}
